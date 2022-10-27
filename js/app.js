@@ -116,4 +116,4 @@ while (guesses > 0) {
 }
 alert('Correct answers were ' + seattle);
 
-alert("You got " + answers + " out of 7 questions right!");
+alert("You got " + answer + " out of 7 questions right!");
