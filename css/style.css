@@ -3,10 +3,28 @@ body {
 }
 
 h1{
-   font-size: 5vw; 
+   font-size: 7vw; 
    color: black;
 }
 
 main p {
     color: black;
+}
+
+h2{
+    font-size: 5vw;
+    background-color: aqua;
+    color: black;
+}
+
+ol {
+    background-color: springgreen;
+    color: blue;
+    list-style-position: inside;
+}
+
+ul {
+    background: blueviolet;
+    color: white;
+    list-style-position: inside;
 }

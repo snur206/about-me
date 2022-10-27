@@ -1,5 +1,7 @@
 'use strict';
 
+let answer = 0;
+
 console.log('hello world');
 
 let visitorName = prompt('What is your name?');
@@ -14,6 +16,7 @@ if(questionOneGuess === 'YES' || questionOneGuess === 'Y') {
 } else if (questionOneGuess === 'NO' || questionOneGuess === 'N') {
   // console.log('Correct.');
     alert('Correct.');
+    answer = answer + 1;
 }
 
 
@@ -25,6 +28,7 @@ if(questionTwoGuess === 'YES' || questionTwoGuess === 'Y') {
 } else if (questionTwoGuess === 'NO' || questionTwoGuess === 'N') {
     // console.log('That if fine. Everyone has their own interest.');
   alert('That if fine. Everyone has their own interest.');
+  answer = answer + 2;
 }
 
 
@@ -36,6 +40,7 @@ if(questionThreeGuess === 'YES' || questionThreeGuess === 'Y') {
 } else if (questionThreeGuess === 'NO' || questionThreeGuess === 'N') {
     // console.log('Incorrect, I can speak English and Somali.');
   alert('Incorrect, I can speak English and Somali.');
+  answer = answer + 3;
 }
 
 let questionFourGuess = prompt('Have I had to get any surgeries??').toUpperCase();
@@ -46,6 +51,7 @@ if(questionFourGuess === 'YES' || questionFourGuess === 'Y') {
 } else if (questionFourGuess === 'NO' || questionFourGuess === 'N') {
     // console.log('Yes. Lucky enough to not need any type of surgery.');
   alert('Yes. Lucky enough to not need any type of surgery.');
+  answer = answer + 4
 }
 
 
@@ -57,6 +63,57 @@ if(questionFiveGuess === 'YES' || questionFiveGuess === 'Y') {
 } else if (questionFiveGuess === 'NO' || questionFiveGuess === 'N') {
     // console.log('Correct!');
   alert('Correct!');
+  answer = answer + 5;
 }
 
 alert(`Thank you for answering these, ${visitorName}. Thank you for coming to my webpage!!`);
+
+let userGuesses = 4
+while(userGuesses > 0) {
+  let myNum = 7
+  
+  let userGuess = prompt('What is my favorite number? You have four guesses.')
+  
+if(userGuess < 7){
+console.log("Too low.");
+alert("Too low.");
+  userGuesses --;
+}  else if (userGuess > 7) {
+  console.log("Too high");
+  alert("Too high.");
+  userGuesses --;
+}  else if (userGuess == 7){
+  console.log("You got it!");
+  alert("You got it!");
+  answer = answer + 6;
+  userGuesses = 0;
+  break;
+
+}
+  if (!userGuesses){
+    console.log("Out of attempts. It was seven.")
+    alert("Out of attempts. It was seven.")
+  }
+}
+
+let seattle = ['Microsoft', 'Boeing', 'Amazon', 'Starbucks', 'Nordstorm', 'Costco' ]
+let guesses = 6;
+let isCorrect = false;
+while (guesses > 0) {
+  let guess = prompt('What are known companies founded in Seattle?')
+   for (let i = 0; i < seattle.length; i++){
+    if (seattle[i] === guess) {
+      console.log('yes that is a company founded in Seattle!');
+      alert('yes that is a company founded in Seattle!');
+      isCorrect = true;
+    }
+  }
+  if (isCorrect)
+  answer = answer + 7; {
+    break;
+  }
+  guesses --;
+}
+alert('Correct answers were ' + seattle);
+
+alert("You got " + answers + " out of 7 questions right!");
