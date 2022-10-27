@@ -82,7 +82,7 @@ alert("Too low.");
   console.log("Too high");
   alert("Too high.");
   userGuesses --;
-}  else if (userGuess == 7){
+}  else if (userGuess === 7){
   console.log("You got it!");
   alert("You got it!");
   answer = answer + 6;
