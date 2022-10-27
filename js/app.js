@@ -72,7 +72,7 @@ let userGuesses = 4
 while(userGuesses > 0) {
   let myNum = 7
   
-  let userGuess = prompt('What is my favorite number? You have four guesses.')
+  let userGuess = +prompt('What is my favorite number? You have four guesses.');
   
 if(userGuess < 7){
 console.log("Too low.");
