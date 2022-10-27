@@ -94,24 +94,26 @@ alert("Too low.");
     console.log("Out of attempts. It was seven.")
     alert("Out of attempts. It was seven.")
   }
+  answer = answer + 6;
 }
 
-let seattle = ['Microsoft', 'Boeing', 'Amazon', 'Starbucks', 'Nordstorm', 'Costco' ]
+let seattle = ['microsoft', 'boeing', 'amazon', 'starbucks', 'nordstorm', 'costco' ]
 let guesses = 6;
 let isCorrect = false;
 while (guesses > 0) {
-  let guess = prompt('What are known companies founded in Seattle?')
+  let guess = prompt('What are known companies founded in Seattle?').toLowerCase();
    for (let i = 0; i < seattle.length; i++){
     if (seattle[i] === guess) {
-      console.log('yes that is a company founded in Seattle!');
-      alert('yes that is a company founded in Seattle!');
+      console.log('These are company founded in Seattle!');
+      alert('These are company founded in Seattle!');
       isCorrect = true;
+      i = 6;
     }
   }
-  if (isCorrect)
-  answer = answer + 7; {
+  if (isCorrect) {
+  answer = answer + 7; 
     break;
-  }
+  }   
   guesses --;
 }
 console.log('Correct answers were ' + seattle);
