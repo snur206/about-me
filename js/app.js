@@ -3,10 +3,8 @@
 let answer = 0;
 
 console.log('hello world');
-
+let visitorName = prompt('What is your name?');
 function questionOne() {
-
-  let visitorName = prompt('What is your name?');
 
   alert(`Hello and welcome to my page ${visitorName}! I Would like for you to answer five yes or no questions.`);
 
@@ -85,8 +83,6 @@ function questionFive() {
   
 }
 
-
-
 function questionSix(){
   for (var i = 0; i < 4; i++) {
     let answerSix = prompt('What is my favorite number? You have four guesses.');
@@ -136,6 +132,7 @@ function questionSeven() {
 
 }
 questionFive();
+alert(`Thank you for answering these, ${visitorName}. Thank you for coming to my webpage!!`);
 questionSix();
 questionSeven();
 
@@ -143,5 +140,5 @@ console.log("You got " + answer + " out of 7 questions right!");
 
 alert("You got " + answer + " out of 7 questions right!");
 
-alert(`Thank you for answering these, ${visitorName}. Thank you for coming to my webpage!!`);
+
 alert(`Thank you for visiting, ${visitorName} and thanks for playing!`)
