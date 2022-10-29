@@ -12,7 +12,7 @@ function questionOne() {
 
   let questionOneGuess = prompt('Do I drink or enjoy coffee?').toUpperCase();
 
-  if(questionOneGuess === 'YES' || questionOneGuess === 'Y') {
+  if (questionOneGuess === 'YES' || questionOneGuess === 'Y') {
     console.log('Incorrect. Even though I am from the city known about coffee.');
     alert('Incorrect. Even though I am from the city known about coffee.');
   } else if (questionOneGuess === 'NO' || questionOneGuess === 'N') {
@@ -23,102 +23,100 @@ function questionOne() {
 }
 questionOne();
 
-function questionTwo(){
+function questionTwo() {
 
 
   let questionTwoGuess = prompt('Do you play sports?').toUpperCase();
 
-  if(questionTwoGuess === 'YES' || questionTwoGuess === 'Y') {
+  if (questionTwoGuess === 'YES' || questionTwoGuess === 'Y') {
     alert('That is great! I do also.');
     console.log('That is great! I do also.');
   } else if (questionTwoGuess === 'NO' || questionTwoGuess === 'N') {
     console.log('That if fine. Everyone has their own interest.');
     alert('That if fine. Everyone has their own interest.');
-    answer = answer + 2;
+    answer = answer + 1;
   }
 }
 questionTwo();
 
-function questionThree(){
+function questionThree() {
 
   let questionThreeGuess = prompt('Can I speak more than one language?').toUpperCase();
 
-  if(questionThreeGuess === 'YES' || questionThreeGuess === 'Y') {
+  if (questionThreeGuess === 'YES' || questionThreeGuess === 'Y') {
     console.log('Correct!');
     alert('Correct! I can speak English and Somali.');
   } else if (questionThreeGuess === 'NO' || questionThreeGuess === 'N') {
     console.log('Incorrect, I can speak English and Somali.');
     alert('Incorrect, I can speak English and Somali.');
-    answer = answer + 3;
+    answer = answer + 1;
   }
-} 
+}
 questionThree();
 
 function questionFour() {
 
   let questionFourGuess = prompt('Have I had to get any surgeries??').toUpperCase();
 
-  if(questionFourGuess === 'YES' || questionFourGuess === 'Y') {
+  if (questionFourGuess === 'YES' || questionFourGuess === 'Y') {
     console.log('Nope. Thankfully the only injury I sustained was a knee sprain.');
     alert('Nope. Thankfully the only injury I sustained was a knee sprain.');
   } else if (questionFourGuess === 'NO' || questionFourGuess === 'N') {
     console.log('Yes. Lucky enough to not need any type of surgery.');
     alert('Yes. Lucky enough to not need any type of surgery.');
-    answer = answer + 4
+    answer = answer + 1;
   }
 }
 questionFour();
 
-function questionFive(){
+function questionFive() {
 
 
   let questionFiveGuess = prompt('Do I have any tattoos?').toUpperCase();
 
-  if(questionFiveGuess === 'YES' || questionFiveGuess === 'Y') {
+  if (questionFiveGuess === 'YES' || questionFiveGuess === 'Y') {
     console.log('Wrong. It is against my religion.');
     alert('Wrong. It is against my religion.');
   } else if (questionFiveGuess === 'NO' || questionFiveGuess === 'N') {
     console.log('Correct!');
     alert('Correct!');
-    answer = answer + 5;
+    answer = answer + 1;
   }
-  alert(`Thank you for answering these, ${visitorName}. Thank you for coming to my webpage!!`);
+  //alert(`Thank you for answering these, ${visitorName}. Thank you for coming to my webpage!!`);
 }
 
-questionFive();
+
 
 function questionSix(){
-
-  let favNum = 7;
-  let guesses = 4;
-  while (guesses > 0) {
-    let questionSix = prompt('What is my favorite number? You have four guesses.');
-    if (questionSix === favNum) {
-      alert('You got it!');
-      score++;
+  for (var i = 0; i < 4; i++) {
+    let answerSix = prompt('What is my favorite number? You have four guesses.');
+    if (i === 3) {
+      alert('Out of guesses, it is 7.');
       break;
-    } else if (questionSix > favNum) {
-      alert(`Too high!. ${guesses - 1} guesses remaining.`);
-    } else if (questionSix < favNum) {
-      alert(`Too low!. ${guesses - 1} guesses remaining.`);
     }
-    guesses--;
+    if (answerSix === '7') {
+      alert('Correct.');
+      break;
+    } else if (answerSix < 7) {
+      alert('Too low.')
+    } else if (answerSix > 7) {
+      alert('Too high.')
+    }
   }
-  if (guesses === 0) {
-    alert(`Ran out of guesses the number was ${favNum}.`);
-  }
-  answer = answer + 6;
+  answer = answer + 1;
 }
-questionSix();
 
-function questionSeven(){
 
-  let seattle = ['microsoft', 'boeing', 'amazon', 'starbucks', 'nordstorm', 'costco' ]
+
+
+function questionSeven() {
+
+  let seattle = ['microsoft', 'boeing', 'amazon', 'starbucks', 'nordstorm', 'costco']
   let guesses = 6;
   let isCorrect = false;
   while (guesses > 0) {
     let guess = prompt('What are known companies founded in Seattle?').toLowerCase();
-    for (let i = 0; i < seattle.length; i++){
+    for (let i = 0; i < seattle.length; i++) {
       if (seattle[i] === guess) {
         console.log('These are company founded in Seattle!');
         alert('These are company founded in Seattle!');
@@ -127,20 +125,22 @@ function questionSeven(){
       }
     }
     if (isCorrect) {
-    answer = answer + 7; 
+      answer = answer + 1;
       break;
-    }   
-    guesses --;
+    }
+    guesses--;
   }
   console.log('Correct answers were ' + seattle);
   alert('Correct answers were ' + seattle);
 
-  
+
 }
+questionFive();
+questionSix();
 questionSeven();
 
 console.log("You got " + answer + " out of 7 questions right!");
 
-  alert("You got " + answer + " out of 7 questions right!");
+alert("You got " + answer + " out of 7 questions right!");
 
-  alert(`Thank you for visiting, ${visitorName} and thanks for playing!`)
+alert(`Thank you for visiting, ${visitorName} and thanks for playing!`)
