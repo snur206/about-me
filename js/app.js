@@ -13,8 +13,8 @@ function questionOne() {
   let questionOneGuess = prompt('Do I drink or enjoy coffee?').toUpperCase();
 
   if(questionOneGuess === 'YES' || questionOneGuess === 'Y') {
-    console.log('Incorrect. Even though I am from the city known about our coffee.');
-    alert('Incorrect. Even though I am from the city known about our coffee.');
+    console.log('Incorrect. Even though I am from the city known about coffee.');
+    alert('Incorrect. Even though I am from the city known about coffee.');
   } else if (questionOneGuess === 'NO' || questionOneGuess === 'N') {
     console.log('Correct.');
     alert('Correct.');
@@ -89,34 +89,25 @@ questionFive();
 
 function questionSix(){
 
-  let userGuesses = 4
-  while(userGuesses > 0) {
-    let myNum = 7
-    
-    let userGuess = +prompt('What is my favorite number? You have four guesses.');
-    
-  if(userGuess < 7){
-  console.log("Too low.");
-  alert("Too low.");
-    userGuesses --;
-  }  else if (userGuess > 7) {
-    console.log("Too high");
-    alert("Too high.");
-    userGuesses --;
-  }  else if (userGuess == 7){
-    console.log("You got it!");
-    alert("You got it!");
-    answer = answer + 6;
-    userGuesses = 0;
-    break;
-
-  }
-    if (!userGuesses){
-      console.log("Out of attempts. It was seven.")
-      alert("Out of attempts. It was seven.")
+  let favNum = 7;
+  let guesses = 4;
+  while (guesses > 0) {
+    let questionSix = prompt('What is my favorite number? You have four guesses.');
+    if (questionSix === favNum) {
+      alert('You got it!');
+      score++;
+      break;
+    } else if (questionSix > favNum) {
+      alert(`Too high!. ${guesses - 1} guesses remaining.`);
+    } else if (questionSix < favNum) {
+      alert(`Too low!. ${guesses - 1} guesses remaining.`);
     }
-    answer = answer + 6;
+    guesses--;
   }
+  if (guesses === 0) {
+    alert(`Ran out of guesses the number was ${favNum}.`);
+  }
+  answer = answer + 6;
 }
 questionSix();
 
@@ -144,7 +135,12 @@ function questionSeven(){
   console.log('Correct answers were ' + seattle);
   alert('Correct answers were ' + seattle);
 
-  console.log("You got " + answer + " out of 7 questions right!");
-  alert("You got " + answer + " out of 7 questions right!");
+  
 }
 questionSeven();
+
+console.log("You got " + answer + " out of 7 questions right!");
+
+  alert("You got " + answer + " out of 7 questions right!");
+
+  alert(`Thank you for visiting, ${visitorName} and thanks for playing!`)

@@ -5,6 +5,8 @@ body {
 h1{
    font-size: 7vw; 
    color: black;
+   text-shadow: 800px 50px 400px green,
+   -6px -6px 6px white; 
 }
 
 main p {
@@ -13,18 +15,20 @@ main p {
 
 h2{
     font-size: 5vw;
-    background-color: aqua;
-    color: black;
+    background-color: black;
+    color: white;
+    text-shadow: 800px 50px 400px green,
+    -4px -4px 2px gold;
 }
 
 ol {
-    background-color: springgreen;
-    color: blue;
+    background-color: gold;
+    color: black;
     list-style-position: inside;
 }
 
 ul {
-    background: blueviolet;
-    color: white;
+    background: gold;
+    color: blacke;
     list-style-position: inside;
 }
