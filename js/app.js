@@ -82,7 +82,7 @@ function questionFive() {
     alert('Correct!');
     answer = answer + 1;
   }
-  //alert(`Thank you for answering these, ${visitorName}. Thank you for coming to my webpage!!`);
+  
 }
 
 
@@ -143,4 +143,5 @@ console.log("You got " + answer + " out of 7 questions right!");
 
 alert("You got " + answer + " out of 7 questions right!");
 
+alert(`Thank you for answering these, ${visitorName}. Thank you for coming to my webpage!!`);
 alert(`Thank you for visiting, ${visitorName} and thanks for playing!`)
